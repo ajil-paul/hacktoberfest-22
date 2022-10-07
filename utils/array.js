@@ -23,3 +23,13 @@ const getRandomNumberInRange = (lower = 0, upper = 10) => {
   upper = Math.floor(upper)
   return Math.floor(Math.random() * (upper - lower + 1)) + lower
 }
+
+// Remove duplicates from an array
+const removeDuplicates = (arr) => {
+  if (!Array.isArray(arr)) {
+    console.error(`array expected, ${typeof arr} provided`)
+    return
+  }
+  return [...new Set(arr)]
+}
+
